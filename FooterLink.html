@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa-ngds.reisys.com/" />
+<title>FooterLink</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">FooterLink</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Sign In</td>
+	<td></td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=field-remember</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-login</td>
+	<td>sbalmuri</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-password</td>
+	<td>Password@1234</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=button.btn.btn-primary</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=ul.unstyled &gt; p</td>
+	<td>Sitewide Search</td>
+</tr>
+<tr>
+	<td>assertValue</td>
+	<td>//input[@id='field-sitewide-search']</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Github</td>
+	<td>Github</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.span2 &gt; ul.unstyled &gt; li &gt; a</td>
+	<td>Data</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=div.span2 &gt; ul.unstyled &gt; li &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=div.span2 &gt; ul.unstyled &gt; li &gt; a</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.toolbar</td>
+	<td>Home Datasets</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/dataset</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Map')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Map')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.map-search &gt; div.container &gt; div.navbar &gt; div.navbar-inner</td>
+	<td>Home Map Search</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/map_search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Publish')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Publish')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.toolbar</td>
+	<td>Home Datasets Create Dataset</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/dataset/new</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Harvest')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Harvest')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.toolbar</td>
+	<td>Home Harvest Sources</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/harvest</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Developers')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Developers')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/ngds/developers</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Help')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Help')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.toolbar</td>
+	<td>Home Help</td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/ngds/help</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>xpath=(//a[contains(text(),'Contact')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>xpath=(//a[contains(text(),'Contact')])[2]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/ngds/contact</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=body &gt; div</td>
+	<td>Home Contact</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.span3 &gt; ul.unstyled &gt; p &gt; strong</td>
+	<td>Who We Are</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=About the NGDS</td>
+	<td>About the NGDS</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=About the NGDS</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/about</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.toolbar</td>
+	<td>Home About</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Our partners</td>
+	<td>Our partners</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Our partners</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/about</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.toolbar</td>
+	<td>Home About</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Getting started</td>
+	<td>Getting started</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Getting started</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.toolbar</td>
+	<td>Home About</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[4]/ul/p/strong</td>
+	<td>Learn About NGDS</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=How to submit data</td>
+	<td>How to submit data</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=How to submit data</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=div.toolbar</td>
+	<td>Home About</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Curate data contributions</td>
+	<td>Curate data contributions</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Curate data contributions</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/map_search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Data models, exchange methods, and metadata</td>
+	<td>Data models, exchange methods, and metadata</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Data models, exchange methods, and metadata</td>
+	<td></td>
+</tr>
+<tr>
+	<td>open</td>
+	<td>/map_search</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Develop custom applications</td>
+	<td>Develop custom applications</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Develop custom applications</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=div.map-search &gt; div.container &gt; div.navbar &gt; div.navbar-inner</td>
+	<td></td>
+</tr>
+</tbody></table>
+</body>
+</html>
