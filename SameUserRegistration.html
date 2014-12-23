@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="http://qa-ngds.reisys.com/" />
+<title>SameUserRegistration</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">SameUserRegistration</td></tr>
+</thead><tbody>
+<tr>
+	<td>open</td>
+	<td>/</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-username</td>
+	<td>Testuser123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-fullname</td>
+	<td>Test User</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-email</td>
+	<td>Test@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-password</td>
+	<td>Password@1234</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-confirm-password</td>
+	<td>Password@1234</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p</td>
+	<td>The form contains invalid entries:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='content']/div[3]/div/article/div/form/div/ul/li</td>
+	<td>exact:Name: Url must be purely lowercase alphanumeric (ascii) characters and these symbols: -_</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-username</td>
+	<td>testuser123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-fullname</td>
+	<td>Test User</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-email</td>
+	<td>Test@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-password</td>
+	<td>Password@1234</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-confirm-password</td>
+	<td>Password@1234</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>css=i.icon-signout</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Register</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-username</td>
+	<td>testuser123</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-fullname</td>
+	<td>Test User</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-email</td>
+	<td>Test@gmail.com</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-password</td>
+	<td>Password@1234</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-confirm-password</td>
+	<td>Password@1234</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=p</td>
+	<td>The form contains invalid entries:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='content']/div[3]/div/article/div/form/div/ul/li</td>
+	<td>exact:Name: That login name is not available.</td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+
+</tbody></table>
+</body>
+</html>

@@ -4,12 +4,12 @@
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <link rel="selenium.base" href="http://qa-ngds.reisys.com/" />
-<title>New Test</title>
+<title>AddingGroups</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">New Test</td></tr>
+<tr><td rowspan="1" colspan="3">AddingGroups</td></tr>
 </thead><tbody>
 <tr>
 	<td>open</td>
@@ -19,16 +19,6 @@
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Sign In</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=field-remember</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=field-remember</td>
 	<td></td>
 </tr>
 <tr>
@@ -48,23 +38,23 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Data</td>
+	<td>link=My Groups</td>
 	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=Add Group</td>
+	<td>Add Group</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>css=i.icon-plus-sign-alt</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=toggle-structured-tab</td>
+	<td>link=Add Group</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=field-title</td>
-	<td>Test Selenium 2</td>
+	<td>id=field-name</td>
+	<td>Test Group</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -73,70 +63,29 @@
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{Date.now()}</td>
+	<td>javascript{&quot;Test Group&quot; +Date.now()}</td>
 	<td>timestamp</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=field-name</td>
+	<td>id=field-url</td>
 	<td>${timestamp}</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=usgin-content-model</td>
-	<td>label=Well Log Observation</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=usgin-content-model-version</td>
-	<td>label=0.8</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=usgin-content-model-layer</td>
-	<td>label=WellLog</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=field-notes</td>
-	<td>description</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=contrib-submit</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=field-image-upload</td>
-	<td>${filepath}</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=field-name</td>
-	<td>Test set upload 1</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=field-description</td>
-	<td>desc</td>
+	<td>This is test group</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=s2id_autogen1</td>
-	<td>csv</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=field-format</td>
-	<td>csv</td>
+	<td>id=field-image-upload</td>
+	<td>${Imageupload}</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=(//button[@name='save'])[4]</td>
-	<td></td>
+	<td>name=save</td>
+	<td>Create Group</td>
 </tr>
 </tbody></table>
 </body>
 </html>
-

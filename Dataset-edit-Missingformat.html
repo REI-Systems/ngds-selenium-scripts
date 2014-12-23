@@ -27,11 +27,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=field-remember</td>
-	<td></td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=field-login</td>
 	<td>${username}</td>
@@ -73,7 +68,7 @@
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{&quot;Testdataset&quot; +Date.now()}</td>
+	<td>javascript{Date.now()}</td>
 	<td>timestamp</td>
 </tr>
 <tr>
@@ -102,49 +97,44 @@
 	<td>description</td>
 </tr>
 <tr>
+	<td>clickAndWait</td>
+	<td>id=contrib-submit</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
-	<td>id=usgin-field-publication-date</td>
-	<td>2014-12-18</td>
+	<td>id=field-image-upload</td>
+	<td>${filepath}</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=usgin-field-resource_id</td>
-	<td>Resource URI</td>
+	<td>id=field-name</td>
+	<td>Test set upload</td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-description</td>
+	<td>Description</td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=s2id_autogen1</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=field-tags</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=field-license</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>link=Authors</td>
+	<td>link=Distributors</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=md-person-name</td>
-	<td>Test Name</td>
+	<td>TestName</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=md-person-position</td>
-	<td>Organizer</td>
+	<td>Position</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=md-organization-name</td>
-	<td>REI</td>
+	<td>Organization Name</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -154,7 +144,7 @@
 <tr>
 	<td>type</td>
 	<td>id=md-phone-number</td>
-	<td>345-234-9010</td>
+	<td>345-2345-9010</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -167,59 +157,9 @@
 	<td>Sterling,VA</td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>link=Metadata Contact</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=div.md-resource-contacts &gt; div.md-input-form.md-related-agent &gt; div.control-group.control-medium &gt; div.controls &gt; #md-person-name</td>
-	<td>Metadata Contact</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=div.md-resource-contacts &gt; div.md-input-form.md-related-agent &gt; div.control-group.control-medium &gt; div.controls &gt; #md-person-position</td>
-	<td>Organizer</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=div.md-resource-contacts &gt; div.md-input-form.md-related-agent &gt; div.control-group.control-medium &gt; div.controls &gt; #md-organization-name</td>
-	<td>Organization Name</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=div.md-resource-contacts &gt; div.md-input-form.md-related-agent &gt; div.control-group.control-medium &gt; div.controls &gt; #md-organization-uri</td>
-	<td>Organization URI</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=div.md-resource-contacts &gt; div.md-input-form.md-related-agent &gt; div.control-group.control-medium &gt; div.controls &gt; #md-phone-number</td>
-	<td>345-678-9010</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=div.md-resource-contacts &gt; div.md-input-form.md-related-agent &gt; div.control-group.control-medium &gt; div.controls &gt; #md-contact-email</td>
-	<td>Test@gmail.com</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>css=div.md-resource-contacts &gt; div.md-input-form.md-related-agent &gt; div.control-group.control-medium &gt; div.controls &gt; #md-contact-address</td>
-	<td>Sterling,VA</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=contrib-submit</td>
-	<td></td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=s2id_autogen1</td>
-	<td>doc</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=field-format</td>
-	<td>doc</td>
+	<td>assertText</td>
+	<td>//div[@id='collapse-md-distributor-fields']/div/div[2]/button</td>
+	<td>Add Distributor</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -234,9 +174,8 @@
 <tr>
 	<td>assertText</td>
 	<td>//form[@id='md-resource-edit']/div/ul/li</td>
-	<td>exact:URL: Missing value</td>
+	<td>exact:Format: Missing value</td>
 </tr>
 </tbody></table>
 </body>
 </html>
-

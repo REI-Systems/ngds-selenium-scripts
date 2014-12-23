@@ -48,23 +48,23 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Data</td>
+	<td>link=My Organizations</td>
 	<td></td>
 </tr>
 <tr>
-	<td>clickAndWait</td>
+	<td>assertElementPresent</td>
 	<td>css=i.icon-plus-sign-alt</td>
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=toggle-structured-tab</td>
+	<td>clickAndWait</td>
+	<td>link=Add Organization</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=field-title</td>
-	<td>Test Selenium 2</td>
+	<td>id=field-name</td>
+	<td>REI1</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -72,71 +72,97 @@
 	<td></td>
 </tr>
 <tr>
-	<td>store</td>
-	<td>javascript{Date.now()}</td>
-	<td>timestamp</td>
+	<td>type</td>
+	<td>id=field-url</td>
+	<td>REI1</td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=field-name</td>
-	<td>${timestamp}</td>
+	<td>id=field-description</td>
+	<td>Description</td>
 </tr>
 <tr>
-	<td>select</td>
-	<td>id=usgin-content-model</td>
-	<td>label=Well Log Observation</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=usgin-content-model-version</td>
-	<td>label=0.8</td>
-</tr>
-<tr>
-	<td>select</td>
-	<td>id=usgin-content-model-layer</td>
-	<td>label=WellLog</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=field-notes</td>
-	<td>description</td>
-</tr>
-<tr>
-	<td>clickAndWait</td>
-	<td>id=contrib-submit</td>
+	<td>click</td>
+	<td>id=field-image-upload</td>
 	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=field-image-upload</td>
-	<td>${filepath}</td>
+	<td>${Imageupload}</td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>name=save</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Organizations</td>
+	<td></td>
+</tr>
+<tr>
+	<td>selectWindow</td>
+	<td>null</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=View REI1</td>
+	<td>View REI1</td>
+</tr>
+<tr>
+	<td>assertElementPresent</td>
+	<td>css=i.icon-plus-sign-alt</td>
+	<td></td>
+</tr>
+<tr>
+	<td>clickAndWait</td>
+	<td>link=Add Organization</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=field-name</td>
-	<td>Test set upload 1</td>
+	<td>REI1</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>css=button.btn.btn-mini</td>
+	<td></td>
+</tr>
+<tr>
+	<td>type</td>
+	<td>id=field-url</td>
+	<td>REI1</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=field-description</td>
-	<td>desc</td>
+	<td>Description</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>id=field-image-upload</td>
+	<td></td>
 </tr>
 <tr>
 	<td>type</td>
-	<td>id=s2id_autogen1</td>
-	<td>csv</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=field-format</td>
-	<td>csv</td>
+	<td>id=field-image-upload</td>
+	<td>${Imageupload}</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>xpath=(//button[@name='save'])[4]</td>
+	<td>name=save</td>
 	<td></td>
 </tr>
-</tbody></table>
-</body>
-</html>
-
+<tr>
+	<td>assertText</td>
+	<td>css=p</td>
+	<td>The form contains invalid entries:</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='content']/div[3]/div/article/div/form/div/ul/li</td>
+	<td>exact:Name: Group name already exists in database</td>
+</tr>

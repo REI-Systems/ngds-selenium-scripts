@@ -27,11 +27,6 @@
 	<td></td>
 </tr>
 <tr>
-	<td>click</td>
-	<td>id=field-remember</td>
-	<td></td>
-</tr>
-<tr>
 	<td>type</td>
 	<td>id=field-login</td>
 	<td>${username}</td>
@@ -58,7 +53,7 @@
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=toggle-unstructured-tab</td>
+	<td>id=toggle-structured-tab</td>
 	<td></td>
 </tr>
 <tr>
@@ -73,7 +68,7 @@
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{Date.now()}</td>
+	<td>javascript{&quot;Testdataset&quot; +Date.now()}</td>
 	<td>timestamp</td>
 </tr>
 <tr>
@@ -82,24 +77,34 @@
 	<td>${timestamp}</td>
 </tr>
 <tr>
+	<td>select</td>
+	<td>id=usgin-content-model</td>
+	<td>label=Well Log Observation</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=usgin-content-model-version</td>
+	<td>label=0.8</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=usgin-content-model-layer</td>
+	<td>label=WellLog</td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=field-notes</td>
-	<td>Description</td>
+	<td>description</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=usgin-field-publication-date</td>
-	<td> 2014-12-15</td>
+	<td>2014-12-19</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=usgin-field-resource_id</td>
-	<td>ResourceURI</td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=field-license</td>
-	<td></td>
+	<td>Resource URI</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -192,33 +197,73 @@
 	<td></td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>id=field-image-upload</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=field-image-upload</td>
-	<td>${Invalidfile}</td>
+	<td>${Invalidfilepath}</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=field-name</td>
-	<td>TestResource</td>
+	<td>AR Well Logs Incorrect</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=field-description</td>
-	<td>desc</td>
+	<td>Description</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=s2id_autogen1</td>
-	<td>doc</td>
+	<td>csv</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=field-format</td>
-	<td>doc</td>
+	<td>csv</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>xpath=(//button[@name='save'])[4]</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='content']/div/div</td>
+	<td>The file(s) provided might have changes to be applied or might have failed the validation. For more details, please click here×</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=here</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h3</td>
+	<td>Content Model Validator</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>link=AR Well Logs Incorrect</td>
+	<td>AR Well Logs Incorrect</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='modal-usginmodels-validation-msg']/div[2]/div/div</td>
+	<td>VALID WITH THE CHANGES BELOW <br /> Resource file selected: arwelllogsinvalid.csv <br /> File does not conform to the selected content model. However, if the changes indicated below are acceptable, download the file below for a conforming copy of your data.<br /> Messages from the Validator Note that in the messages below Row 0 indicates the header row.<br /> If your CSV viewer indicates the header row as Row 1 the row numbers below will need to be incremented by 1.<br /> Row 0 Warning! OtherLogID was not found in the imported file but this is not a required field so ignoring.<br /> Download Click the button below to download a copy of your data which has applied to it the changes indicated in the Warning and Notice messages.<br /> Download</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='modal-usginmodels-validation-msg']/div[2]/div</td>
+	<td>AR Well Logs Incorrect VALID WITH THE CHANGES BELOW <br /> Resource file selected: arwelllogsinvalid.csv <br /> File does not conform to the selected content model. However, if the changes indicated below are acceptable, download the file below for a conforming copy of your data.<br /> Messages from the Validator Note that in the messages below Row 0 indicates the header row.<br /> If your CSV viewer indicates the header row as Row 1 the row numbers below will need to be incremented by 1.<br /> Row 0 Warning! OtherLogID was not found in the imported file but this is not a required field so ignoring.<br /> Download Click the button below to download a copy of your data which has applied to it the changes indicated in the Warning and Notice messages.<br /> Download</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=Close</td>
 	<td></td>
 </tr>
 </tbody></table>
