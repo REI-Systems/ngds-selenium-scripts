@@ -3,32 +3,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head profile="http://selenium-ide.openqa.org/profiles/test-case">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<link rel="selenium.base" href="http://qa-ngds.reisys.com/" />
-<title>New Test</title>
+<link rel="selenium.base" href="http://qa-ngds.reisys.com" />
+<title>ValidationforAbandonedwelllogscsvfile</title>
 </head>
 <body>
 <table cellpadding="1" cellspacing="1" border="1">
 <thead>
-<tr><td rowspan="1" colspan="3">New Test</td></tr>
+<tr><td rowspan="1" colspan="3">ValidationforAbandonedwelllogscsvfile</td></tr>
 </thead><tbody>
-<tr>
-	<td>open</td>
-	<td>/</td>
-	<td></td>
-</tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>link=Sign In</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=field-remember</td>
-	<td></td>
-</tr>
-<tr>
-	<td>click</td>
-	<td>id=field-remember</td>
 	<td></td>
 </tr>
 <tr>
@@ -48,17 +33,17 @@
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>link=Data</td>
+	<td>link=My Datasets</td>
 	<td></td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
-	<td>css=i.icon-plus-sign-alt</td>
+	<td>link=Add Dataset</td>
 	<td></td>
 </tr>
 <tr>
 	<td>click</td>
-	<td>id=toggle-unstructured-tab</td>
+	<td>id=toggle-structured-tab</td>
 	<td></td>
 </tr>
 <tr>
@@ -73,13 +58,28 @@
 </tr>
 <tr>
 	<td>store</td>
-	<td>javascript{&quot;Testdataset&quot; +Date.now()}</td>
+	<td>javascript{&quot;Testdataset&quot;+Date.now()}</td>
 	<td>timestamp</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=field-name</td>
 	<td>${timestamp}</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=usgin-content-model</td>
+	<td>label=Abandoned Mines</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=usgin-content-model-version</td>
+	<td>label=0.3</td>
+</tr>
+<tr>
+	<td>select</td>
+	<td>id=usgin-content-model-layer</td>
+	<td>label=AbandonedMine</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -89,22 +89,22 @@
 <tr>
 	<td>type</td>
 	<td>id=usgin-field-publication-date</td>
-	<td> 2014-12-15</td>
+	<td>2014-18-12</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=usgin-field-resource_id</td>
-	<td>ResourceURI</td>
+	<td>Resource URI</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=s2id_autogen1</td>
-	<td>economy,agriculture.government</td>
+	<td>economy,agriculture</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=field-license</td>
-	<td>cc-by-sa</td>
+	<td>other-at</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -114,37 +114,7 @@
 <tr>
 	<td>type</td>
 	<td>id=md-person-name</td>
-	<td>TestUser</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=md-person-position</td>
-	<td>XYZ</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=md-organization-name</td>
-	<td>REI SYSTEMS</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=md-organization-uri</td>
-	<td>ORGANIZATION URI</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=md-phone-number</td>
-	<td>123-345-7890</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=md-contact-email</td>
-	<td>TEST@gmail.com</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>id=md-contact-address</td>
-	<td>Sterling,VA</td>
+	<td>Author</td>
 </tr>
 <tr>
 	<td>click</td>
@@ -154,42 +124,7 @@
 <tr>
 	<td>type</td>
 	<td>//div[@id='collapse-md-metadata-contact-fields']/div/div/div/div/div/div/input</td>
-	<td>TestUser</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>//div[@id='collapse-md-metadata-contact-fields']/div/div/div/div/div[2]/div/input</td>
-	<td>XYZ</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>//div[@id='collapse-md-metadata-contact-fields']/div/div/div/div/div[3]/div/input</td>
-	<td>REISYSTEMS</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>//div[@id='collapse-md-metadata-contact-fields']/div/div/div/div/div[4]/div/input</td>
-	<td>ORGANIZATION URI</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>//div[@id='collapse-md-metadata-contact-fields']/div/div/div/div/div[3]/div/input</td>
-	<td>REI SYSTEMS</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>//div[@id='collapse-md-metadata-contact-fields']/div/div/div/div/div[5]/div/input</td>
-	<td>234-345-7890</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>//div[@id='collapse-md-metadata-contact-fields']/div/div/div/div/div[6]/div/input</td>
-	<td>Test@gmail.com</td>
-</tr>
-<tr>
-	<td>type</td>
-	<td>//div[@id='collapse-md-metadata-contact-fields']/div/div/div/div/div[7]/div/input</td>
-	<td>Sterling,VA</td>
+	<td>Metadata Author</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
@@ -197,14 +132,19 @@
 	<td></td>
 </tr>
 <tr>
+	<td>click</td>
+	<td>id=field-image-upload</td>
+	<td></td>
+</tr>
+<tr>
 	<td>type</td>
 	<td>id=field-image-upload</td>
-	<td>${Invalidfile}</td>
+	<td>${filepath}</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=field-name</td>
-	<td>TestResource</td>
+	<td>TestResouce</td>
 </tr>
 <tr>
 	<td>type</td>
@@ -214,17 +154,37 @@
 <tr>
 	<td>type</td>
 	<td>id=s2id_autogen1</td>
-	<td>doc</td>
+	<td>csv</td>
 </tr>
 <tr>
 	<td>type</td>
 	<td>id=field-format</td>
-	<td>doc</td>
+	<td>csv</td>
 </tr>
 <tr>
 	<td>clickAndWait</td>
 	<td>xpath=(//button[@name='save'])[4]</td>
 	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='content']/div/div</td>
+	<td>The file(s) provided might have changes to be applied or might have failed the validation. For more details, please click here×</td>
+</tr>
+<tr>
+	<td>click</td>
+	<td>link=here</td>
+	<td></td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>css=h3</td>
+	<td>Content Model Validator</td>
+</tr>
+<tr>
+	<td>assertText</td>
+	<td>//div[@id='modal-usginmodels-validation-msg']/div[2]/div/div/div</td>
+	<td>FAILED VALIDATION <br /> Resource file selected: arwelllogs.csv <br /> File does not conform to the selected content model. <br /> The issues indicated in the messages below must be fixed before the data will validate. If the changes indicated in the Warning and Notice messages are acceptable, download the file below and then in that document fix the indicated errors.<br /> Messages from the Validator Note that in the messages below Row 0 indicates the header row.<br /> If your CSV viewer indicates the header row as Row 1 the row numbers below will need to be incremented by 1.<br /> * Row 0 Error! FeatureURI is a required field but was not found in the imported file.<br /> Download Click the button below to download a copy of your data which has applied to it the changes indicated in the Warning and Notice messages.<br /> Download</td>
 </tr>
 </tbody></table>
 </body>
